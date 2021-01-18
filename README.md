@@ -3,7 +3,8 @@
 A toy implementation of naive-evaluated Datalog in Elixir, based on the blog
 post [The Essence of
 Datalog](https://dodisturb.me/posts/2018-12-25-The-Essence-of-Datalog.html). The
-Datalog program given the blog post is included in the `Datalog.Example** module.
+Datalog program given in the blog post is included in the `Datalog.Example`
+module.
 
 **DO NOT USE THIS IN PRODUCTION, THIS IS FOR EDUCATIONAL PURPOSES ONLY.**
 
@@ -14,7 +15,7 @@ Datalog program given the blog post is included in the `Datalog.Example** module
   `Sym`.
 
 * *No monadic do-notation.* In a few places, I had to unpack the implicit
-  iteration and flat-mapping that monadic notation and make it explicit. The
+  iteration and flat-mapping that do-notation induces and make it explicit. The
   code looks a little strange as a result, with some `++` and `Enum.concat/1` to
   get the desired level of list-nesting. See `eval_atom/3` for an example of
   this.
