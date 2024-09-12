@@ -121,7 +121,7 @@ defmodule Datalog do
   defp unify([{{:var, _} = v, {:sym, s}} = pair | rest]) do
     with {:ok, incomplete_substitution} <- unify(rest) do
       case List.keyfind(incomplete_substitution, v, 0) do
-        {:sym, s1} when s1 != s ->
+        {^v, {:sym, s1}} when s1 != s ->
           nil
 
         _ ->
